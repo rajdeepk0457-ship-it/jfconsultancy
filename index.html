@@ -57,8 +57,8 @@ p{line-height:1.7;margin-bottom:15px;}
 
 iframe{
     width:100%;
-    min-height:800px;
-    border:0;
+    min-height:900px;
+    border:none;
 }
 
 footer{
@@ -100,26 +100,22 @@ footer{
 
 <p>
 <strong>JFinders (JFinders – B &amp; S Consultancy)</strong> is a specialized
-recruitment and staffing firm focused on fulfilling customer‑specific hiring
-requirements across PAN India. We bring deep industry knowledge and a
-results‑driven approach to deliver cost‑effective and high‑quality recruitment
-solutions.
+recruitment and staffing firm focused on PAN India hiring requirements.
 </p>
 
 <p>
-We have strong expertise in sourcing skilled professionals from Tier 2 and Tier 3
-cities, enabling organizations to access a wider talent pool while optimizing
-hiring costs and timelines.
+We specialize in sourcing skilled professionals from Tier 2 and Tier 3 cities,
+optimizing both cost and time-to-hire.
 </p>
 
 <p>
-Our team delivers pre‑screened, job‑ready candidates aligned with both technical
-and cultural requirements, making us a trusted recruitment partner.
+Our pre-screened, job-ready candidates align with both technical and cultural
+requirements.
 </p>
 </div>
 
 <div class="hero-image">
-<img src="images/logo.png" alt="JFinders Logo">
+    <img src="images/logo.png" alt="JFinders Logo">
 </div>
 </div>
 </section>
@@ -129,20 +125,13 @@ and cultural requirements, making us a trusted recruitment partner.
 <h2>About Us</h2>
 
 <p>
-<strong>JFinders</strong> is an India‑based job search and recruitment platform
-specializing in IT and Non‑IT job opportunities. Unlike traditional job boards,
-JFinders aggregates opportunities from multiple platforms into one centralized
-search experience.
+<strong>JFinders</strong> is an India‑based recruitment platform serving IT & Non‑IT
+hiring across industries.
 </p>
 
 <p>
-We maintain a strong talent pool of over <strong>5,000+ skilled professionals</strong>,
-helping organizations meet hiring demands across industries and experience levels.
-</p>
-
-<p>
-With a focus on quality, transparency, and speed, JFinders bridges the gap between
-the right talent and the right opportunity.
+With a strong pool of <strong>5,000+ professionals</strong>, we deliver quality,
+speed, and transparency.
 </p>
 </section>
 
@@ -154,7 +143,7 @@ the right talent and the right opportunity.
 <li>Non‑IT Recruitment</li>
 <li>Bulk Hiring</li>
 <li>Contract Staffing</li>
-<li>PAN India Recruitment Support</li>
+<li>PAN India Recruitment</li>
 </ul>
 </section>
 
@@ -163,16 +152,23 @@ the right talent and the right opportunity.
 <h2>Apply for Jobs</h2>
 <p>Please fill out the form below to apply:</p>
 
+<!-- ✅ CORRECT GOOGLE FORM EMBED -->
 <iframe 
-  src="https://forms.gle/47seX6FrChMfKt9t7"
-  loading="lazy">
+  src="https://docs.google.com/forms/d/e/1FAIpQLSdXXXXXXXXXXXX/viewform?embedded=true">
+  Loading…
 </iframe>
+
+<p style="margin-top:15px;">
+<a href="https://forms.gle/47seX6FrChMfKt9t7" target="_blank">
+Open form in new tab
+</a>
+</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="page">
 <h2>Contact Us</h2>
-<p>Email: hr@jfinders.com</p>
+<p>Email: hr@jffinders.com</p>
 <p>Phone: +91 70005 32112</p>
 <p>Location: Pune</p>
 </section>
@@ -183,9 +179,8 @@ the right talent and the right opportunity.
 
 <script>
 function showPage(id){
-    document.querySelectorAll('.page').forEach(
-        page => page.classList.remove('active')
-    );
+    document.querySelectorAll('.page')
+      .forEach(page => page.classList.remove('active'));
     document.getElementById(id).classList.add('active');
 }
 </script>
