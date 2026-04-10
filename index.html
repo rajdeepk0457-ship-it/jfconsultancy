@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>JFinders | JFinder – B & S Consultancy</title>
+<title>JFinders | JFinders – B & S Consultancy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -41,7 +41,7 @@ header{
 section{
     padding:60px 80px;
 }
-h1,h2{color:#2f55d4;margin-bottom:15px;}
+h1,h2,h3{color:#2f55d4;margin-bottom:15px;}
 p{line-height:1.7;margin-bottom:15px;}
 
 .page{display:none;}
@@ -51,8 +51,15 @@ p{line-height:1.7;margin-bottom:15px;}
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:40px;
 }
 .hero-image img{max-width:350px;}
+
+iframe{
+    width:100%;
+    min-height:800px;
+    border:0;
+}
 
 footer{
     background:#2f55d4;
@@ -73,15 +80,12 @@ footer{
 <!-- NAVBAR -->
 <header>
 <div class="navbar">
-<h2>JFinder</h2>
+<h2>JFinders</h2>
 <ul>
 <li><a onclick="showPage('home')">Home</a></li>
 <li><a onclick="showPage('about')">About</a></li>
 <li><a onclick="showPage('services')">Services</a></li>
-<li>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdXXXXXXXXXXXXXXXX/viewform"
-target="_blank">Apply</a>
-</li>
+<li><a onclick="showPage('apply')">Apply</a></li>
 <li><a onclick="showPage('contact')">Contact</a></li>
 </ul>
 </div>
@@ -91,11 +95,11 @@ target="_blank">Apply</a>
 <section id="home" class="page active">
 <div class="hero">
 <div>
-<h1>JFinder</h1>
-<h3>JFinder – B & S Consultancy</h3>
+<h1>JFinders</h1>
+<h3>JFinders – B &amp; S Consultancy</h3>
 
 <p>
-<strong>JFinders (JFinder – B & S Consultancy)</strong> is a specialized
+<strong>JFinders (JFinders – B &amp; S Consultancy)</strong> is a specialized
 recruitment and staffing firm focused on fulfilling customer‑specific hiring
 requirements across PAN India. We bring deep industry knowledge and a
 results‑driven approach to deliver cost‑effective and high‑quality recruitment
@@ -105,20 +109,17 @@ solutions.
 <p>
 We have strong expertise in sourcing skilled professionals from Tier 2 and Tier 3
 cities, enabling organizations to access a wider talent pool while optimizing
-hiring costs and timelines. Our strategic sourcing model ensures efficiency,
-scalability, and long‑term value for our clients.
+hiring costs and timelines.
 </p>
 
 <p>
-Our team is dedicated to delivering pre‑screened, job‑ready, and quality
-candidates who align with both technical and cultural requirements. We aim to be a
-trusted recruitment partner for organizations seeking fast, reliable, and
-scalable IT & Non‑IT hiring support.
+Our team delivers pre‑screened, job‑ready candidates aligned with both technical
+and cultural requirements, making us a trusted recruitment partner.
 </p>
 </div>
 
 <div class="hero-image">
-<img src="images/logo.png" alt="JF Consultancy Logo">
+<img src="images/logo.png" alt="JFinders Logo">
 </div>
 </div>
 </section>
@@ -129,24 +130,19 @@ scalable IT & Non‑IT hiring support.
 
 <p>
 <strong>JFinders</strong> is an India‑based job search and recruitment platform
-specializing in both IT and Non‑IT job opportunities. Unlike traditional job
-boards, JFinder aggregates and sources thousands of career opportunities from
-multiple platforms across India—bringing them together in one centralized search
-experience.
+specializing in IT and Non‑IT job opportunities. Unlike traditional job boards,
+JFinders aggregates opportunities from multiple platforms into one centralized
+search experience.
 </p>
 
 <p>
-We maintain a strong and diverse talent pool of over
-<strong>5,000+ skilled professionals</strong>, enabling us to meet hiring demands
-across various industries and experience levels. Our recruitment process focuses
-on understanding client needs, role expectations, and delivery timelines to
-ensure effective placements.
+We maintain a strong talent pool of over <strong>5,000+ skilled professionals</strong>,
+helping organizations meet hiring demands across industries and experience levels.
 </p>
 
 <p>
-With a commitment to quality, transparency, and speed, JFinder continues to
-support organizations and job seekers by bridging the gap between the right talent
-and the right opportunity.
+With a focus on quality, transparency, and speed, JFinders bridges the gap between
+the right talent and the right opportunity.
 </p>
 </section>
 
@@ -162,6 +158,17 @@ and the right opportunity.
 </ul>
 </section>
 
+<!-- APPLY -->
+<section id="apply" class="page">
+<h2>Apply for Jobs</h2>
+<p>Please fill out the form below to apply:</p>
+
+<iframe 
+  src="https://forms.gle/47seX6FrChMfKt9t7"
+  loading="lazy">
+</iframe>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="page">
 <h2>Contact Us</h2>
@@ -171,12 +178,14 @@ and the right opportunity.
 </section>
 
 <footer>
-<p>© 2026 JFinders. All Rights Reserved.</p>
+<p>© 2026 JFinders – B &amp; S Consultancy. All Rights Reserved.</p>
 </footer>
 
 <script>
 function showPage(id){
-    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(
+        page => page.classList.remove('active')
+    );
     document.getElementById(id).classList.add('active');
 }
 </script>
