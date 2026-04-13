@@ -1,189 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>JFinders | JFinders – B & S Consultancy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-body{
-    background:#ffffff;
-    color:#333;
-}
-header{
-    background:#2f55d4;
-    padding:15px 50px;
-}
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.navbar h2{color:#fff;}
-.navbar ul{
-    list-style:none;
-    display:flex;
-}
-.navbar ul li{margin-left:25px;}
-.navbar ul li a{
-    color:#fff;
-    text-decoration:none;
-    cursor:pointer;
-}
-.navbar ul li a:hover{text-decoration:underline;}
-
-section{
-    padding:60px 80px;
-}
-h1,h2,h3{color:#2f55d4;margin-bottom:15px;}
-p{line-height:1.7;margin-bottom:15px;}
-
-.page{display:none;}
-.page.active{display:block;}
-
-.hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
-}
-.hero-image img{max-width:350px;}
-
-iframe{
-    width:100%;
-    min-height:900px;
-    border:none;
-}
-
-footer{
-    background:#2f55d4;
-    color:#fff;
-    text-align:center;
-    padding:15px;
-}
-
-@media(max-width:900px){
-    .hero{flex-direction:column;text-align:center;}
-    section{padding:40px 20px;}
-}
-</style>
-</head>
-
 <body>
 
-<!-- NAVBAR -->
 <header>
-<div class="navbar">
-<h2>JFinders</h2>
-<ul>
-<li><a onclick="showPage('home')">Home</a></li>
-<li><a onclick="showPage('about')">About</a></li>
-<li><a onclick="showPage('services')">Services</a></li>
-<li><a onclick="showPage('apply')">Apply</a></li>
-<li><a onclick="showPage('contact')">Contact</a></li>
-</ul>
-</div>
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="JFinders Logo">
+      <span>JFinders</span>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#apply">Apply</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </header>
 
-<!-- HOME -->
-<section id="home" class="page active">
-<div class="hero">
-<div>
-<h1>JFinders</h1>
-<h3>JFinders – B &amp; S Consultancy</h3>
-
-<p>
-<strong>JFinders (JFinders – B &amp; S Consultancy)</strong> is a specialized
-recruitment and staffing firm focused on PAN India hiring requirements.
-</p>
-
-<p>
-We specialize in sourcing skilled professionals from Tier 2 and Tier 3 cities,
-optimizing both cost and time-to-hire.
-</p>
-
-<p>
-Our pre-screened, job-ready candidates align with both technical and cultural
-requirements.
-</p>
-</div>
-
-<div class="hero-image">
-    <img src="images/logo.png" alt="JFinders Logo">
-</div>
-</div>
+<section id="home">
+  <h1>JFinders</h1>
+  <h3>JFinders – B &amp; S Consultancy</h3>
+  <p>
+    <strong>JFinders (B &amp; S Consultancy)</strong> is a specialized recruitment firm
+    focused on customer‑requirement hiring across PAN India.
+  </p>
+  <p>
+    We specialize in sourcing talent from Tier‑2 and Tier‑3 cities,
+    ensuring cost‑effective and efficient hiring solutions.
+  </p>
+  <p>
+    We deliver pre‑screened, high‑quality candidates and support
+    fast and scalable IT &amp; Non‑IT recruitment.
+  </p>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="page">
-<h2>About Us</h2>
-
-<p>
-<strong>JFinders</strong> is an India‑based recruitment platform serving IT & Non‑IT
-hiring across industries.
-</p>
-
-<p>
-With a strong pool of <strong>5,000+ professionals</strong>, we deliver quality,
-speed, and transparency.
-</p>
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    JFinders is an India‑based recruitment and job search platform
+    offering IT and Non‑IT hiring solutions across industries.
+  </p>
+  <p>
+    With a strong pool of more than <strong>5,000 verified professionals</strong>,
+    we ensure quality, transparency, and speed.
+  </p>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="page">
-<h2>Our Services</h2>
-<ul>
-<li>IT Recruitment</li>
-<li>Non‑IT Recruitment</li>
-<li>Bulk Hiring</li>
-<li>Contract Staffing</li>
-<li>PAN India Recruitment</li>
-</ul>
+<section id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>IT Recruitment</li>
+    <li>Non‑IT Recruitment</li>
+    <li>Bulk Hiring</li>
+    <li>Contract Staffing</li>
+    <li>PAN India Recruitment</li>
+  </ul>
 </section>
 
-<!-- APPLY -->
-<section id="apply" class="page">
-<h2>Apply for Jobs</h2>
-<p>Please fill out the form below to apply:</p>
-
-<!-- ✅ CORRECT GOOGLE FORM EMBED -->
-<iframe 
-  src="https://docs.google.com/forms/d/e/1FAIpQLSdXXXXXXXXXXXX/viewform?embedded=true">
-  Loading…
-</iframe>
-
-<p style="margin-top:15px;">
-<a href="https://forms.gle/47seX6FrChMfKt9t7" target="_blank">
-Open form in new tab
-</a>
-</p>
+<section id="apply">
+  <h2>Apply for Jobs</h2>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdXXXXXXXXXXXX/viewform?embedded=true"></iframe>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="page">
-<h2>Contact Us</h2>
-<p>Email: hr@jffinders.com</p>
-<p>Phone: +91 70005 32112</p>
-<p>Location: Pune</p>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: hr@jfinders.com</p>
+  <p>Phone: +91 70005 32112</p>
+  <p>Location: Pune, India</p>
 </section>
 
 <footer>
-<p>© 2026 JFinders – B &amp; S Consultancy. All Rights Reserved.</p>
+  <p>© 2026 JFinders – B &amp; S Consultancy. All Rights Reserved.</p>
 </footer>
 
-<script>
-function showPage(id){
-    document.querySelectorAll('.page')
-      .forEach(page => page.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-}
-</script>
-
 </body>
-</html>
+
+
+ 
