@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>JFinders | B &amp; S Consultancy</title>
+  <title>JFinders | B & S Consultancy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -30,8 +30,6 @@
     .hero{display:flex;justify-content:space-between;align-items:center;gap:40px;}
     .hero-image img{max-width:320px;}
 
-    iframe{width:100%;min-height:900px;border:none;}
-
     footer{background:#2f55d4;color:#fff;text-align:center;padding:15px;}
 
     @media(max-width:900px){
@@ -53,7 +51,11 @@
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('about')">About</a></li>
       <li><a onclick="showPage('services')">Services</a></li>
-      <li><a onclick="showPage('apply')">Apply</a></li>
+      <li>
+        <a href="https://forms.gle/47seX6FrChMfKt9t7" target="_blank" rel="noopener noreferrer">
+          Apply
+        </a>
+      </li>
       <li><a onclick="showPage('contact')">Contact</a></li>
     </ul>
   </div>
@@ -63,13 +65,13 @@
   <div class="hero">
     <div>
       <h1>JFinders</h1>
-      <h3>JFinders – B &amp; S Consultancy</h3>
+      <h3>JFinders – B & S Consultancy</h3>
 
-      <p><strong>JFinders (B &amp; S Consultancy)</strong> is a specialized recruitment firm focused on customer‑requirement hiring across PAN India.</p>
+      <p><strong>JFinders (B & S Consultancy)</strong> is a specialized recruitment firm focused on customer‑requirement hiring across PAN India.</p>
 
       <p>We have strong expertise in sourcing talent from Tier‑2 and Tier‑3 cities, ensuring cost‑effective and efficient hiring solutions.</p>
 
-      <p>Our team delivers pre‑screened, high‑quality candidates and aims to be a reliable hiring partner for fast and scalable IT &amp; Non‑IT recruitment support.</p>
+      <p>Our team delivers pre‑screened, high‑quality candidates and aims to be a reliable hiring partner for fast and scalable IT & Non‑IT recruitment support.</p>
     </div>
 
     <div class="hero-image">
@@ -96,11 +98,6 @@
   </ul>
 </section>
 
-<section id="apply" class="page">
-  <h2>Apply for Jobs</h2>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD47seX6FrChMfKt9t7/viewform?embedded=true"></iframe>
-</section>
-
 <section id="contact" class="page">
   <h2>Contact Us</h2>
   <p>Email: hr@jfinders.com</p>
@@ -109,12 +106,12 @@
 </section>
 
 <footer>
-  <p>© 2026 JFinders – B &amp; S Consultancy. All Rights Reserved.</p>
+  <p>© 2026 JFinders – B & S Consultancy. All Rights Reserved.</p>
 </footer>
 
 <script>
   function showPage(id){
-    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
   }
 </script>
