@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>JFinders | B & S Consultancy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 * {
@@ -21,61 +21,62 @@ body {
 /* HEADER */
 header {
   background: #2f55d4;
-  padding: 15px 20px;
+  padding: 12px 16px;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+  flex-direction: column;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
 .logo img {
-  height: 45px;
-  margin-right: 10px;
-  background: #fff;
+  height: 40px;
+  margin-right: 8px;
+  background: #ffffff;
   padding: 4px;
   border-radius: 6px;
 }
 
 .logo span {
-  color: #fff;
-  font-size: 22px;
+  color: #ffffff;
+  font-size: 20px;
   font-weight: bold;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.navbar ul {
+/* MENU */
+.nav-menu {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;   /* ✅ VERY IMPORTANT */
+  gap: 14px;
 }
 
-.navbar ul li {
-  margin-left: 25px;
-}
-
-.navbar ul li a {
-  color: #fff;
+.nav-menu li a {
+  color: #ffffff;
   text-decoration: none;
-  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-/* PAGES */
+/* DESKTOP */
+@media (min-width: 769px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* PAGE CONTENT */
 section {
-  padding: 60px 80px;
+  padding: 50px 20px;
 }
 
 .page {
@@ -88,67 +89,44 @@ section {
 
 h1, h2, h3 {
   color: #2f55d4;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 p {
   line-height: 1.7;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 /* HERO */
 .hero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .hero-image img {
-  max-width: 300px;
+  max-width: 250px;
+}
+
+/* DESKTOP HERO */
+@media (min-width: 769px) {
+  section {
+    padding: 60px 80px;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* FOOTER */
 footer {
   background: #2f55d4;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
-  padding: 15px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #2f55d4;
-    flex-direction: column;
-    display: none;
-  }
-
-  .navbar ul li {
-    margin: 15px 0;
-    text-align: center;
-  }
-
-  .navbar ul.show {
-    display: flex;
-  }
-
-  section {
-    padding: 40px 20px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
+  padding: 14px;
 }
 </style>
 </head>
@@ -158,13 +136,11 @@ footer {
 <header>
   <div class="navbar">
     <div class="logo" onclick="showPage('home')">
-      <img src="./logo.png" alt="JFinders Logo" />
+      <img src="./logo.png" alt="JFinders Logo">
       <span>JFinders</span>
     </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <ul id="navMenu">
+    <ul class="nav-menu">
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('about')">About</a></li>
       <li><a onclick="showPage('services')">Services</a></li>
@@ -180,22 +156,24 @@ footer {
   <div class="hero">
     <div>
       <h1>JFinders</h1>
-      <h3>JFinders – B & S Consultancy</h3>
-      <p><strong>JFinders (B & S Consultancy)</strong> is a specialized recruitment firm focused on customer‑requirement hiring across PAN India.</p>
-      <p>We source talent from Tier‑2 and Tier‑3 cities for cost‑effective hiring.</p>
-      <p>We deliver pre‑screened, high‑quality candidates for IT & Non‑IT roles.</p>
+      <h3>B & S Consultancy</h3>
+
+      <p><strong>JFinders</strong> is a specialized recruitment firm focused on PAN‑India IT & Non‑IT hiring.</p>
+      <p>We specialize in Tier‑2 and Tier‑3 city talent sourcing.</p>
+      <p>Fast, reliable, and pre‑screened recruitment solutions.</p>
     </div>
+
     <div class="hero-image">
-      <img src="./logo.png" alt="JFinders Logo" />
+      <img src="./logo.png" alt="JFinders Logo">
     </div>
   </div>
 </section>
 
 <section id="about" class="page">
   <h2>About Us</h2>
-  <p><strong>JFinders</strong> is an India‑based recruitment platform providing IT and Non‑IT hiring solutions.</p>
-  <p>We aggregate job opportunities across India for faster hiring.</p>
-  <p>Backed by <strong>5,000+ verified professionals</strong>.</p>
+  <p><strong>JFinders</strong> is an India‑based recruitment and job search platform.</p>
+  <p>We aggregate opportunities from multiple hiring sources.</p>
+  <p><strong>5,000+</strong> verified professionals in our network.</p>
 </section>
 
 <section id="services" class="page">
@@ -205,7 +183,7 @@ footer {
     <li>Non‑IT Recruitment</li>
     <li>Bulk Hiring</li>
     <li>Contract Staffing</li>
-    <li>PAN India Recruitment</li>
+    <li>PAN India Hiring</li>
   </ul>
 </section>
 
@@ -224,11 +202,6 @@ footer {
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  document.getElementById('navMenu').classList.remove('show');
-}
-
-function toggleMenu() {
-  document.getElementById('navMenu').classList.toggle('show');
 }
 </script>
 
