@@ -1,44 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>JFinders | B & S Consultancy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>JFinders | B & S Consultancy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
-    body{background:#ffffff;color:#333;}
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    header{background:#2f55d4;padding:15px 50px;}
-    .navbar{display:flex;justify-content:space-between;align-items:center;}
+body {
+  background: #ffffff;
+  color: #333;
+}
 
-    .logo{display:flex;align-items:center;cursor:pointer;}
-    .logo img{height:55px;margin-right:10px;background:#fff;padding:4px;border-radius:6px;}
-    .logo span{color:#fff;font-size:22px;font-weight:bold;}
+/* HEADER */
+header {
+  background: #2f55d4;
+  padding: 15px 20px;
+}
 
-    .navbar ul{list-style:none;display:flex;}
-    .navbar ul li{margin-left:25px;}
-    .navbar ul li a{color:#fff;text-decoration:none;cursor:pointer;}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-    section{padding:60px 80px;}
-    h1,h2,h3{color:#2f55d4;margin-bottom:15px;}
-    p{line-height:1.7;margin-bottom:15px;}
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
-    .page{display:none;}
-    .page.active{display:block;}
+.logo img {
+  height: 45px;
+  margin-right: 10px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 6px;
+}
 
-    .hero{display:flex;justify-content:space-between;align-items:center;gap:40px;}
-    .hero-image img{max-width:320px;}
+.logo span {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
 
-    footer{background:#2f55d4;color:#fff;text-align:center;padding:15px;}
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
 
-    @media(max-width:900px){
-      header{padding:15px 20px;}
-      .hero{flex-direction:column;text-align:center;}
-      section{padding:40px 20px;}
-    }
-  </style>
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 25px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* PAGES */
+section {
+  padding: 60px 80px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+h1, h2, h3 {
+  color: #2f55d4;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-image img {
+  max-width: 300px;
+}
+
+/* FOOTER */
+footer {
+  background: #2f55d4;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #2f55d4;
+    flex-direction: column;
+    display: none;
+  }
+
+  .navbar ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -47,14 +161,15 @@
       <img src="./logo.png" alt="JFinders Logo" />
       <span>JFinders</span>
     </div>
-    <ul>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul id="navMenu">
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('about')">About</a></li>
       <li><a onclick="showPage('services')">Services</a></li>
       <li>
-        <a href="https://forms.gle/47seX6FrChMfKt9t7" target="_blank" rel="noopener noreferrer">
-          Apply
-        </a>
+        <a href="https://forms.gle/47seX6FrChMfKt9t7" target="_blank">Apply</a>
       </li>
       <li><a onclick="showPage('contact')">Contact</a></li>
     </ul>
@@ -66,14 +181,10 @@
     <div>
       <h1>JFinders</h1>
       <h3>JFinders – B & S Consultancy</h3>
-
       <p><strong>JFinders (B & S Consultancy)</strong> is a specialized recruitment firm focused on customer‑requirement hiring across PAN India.</p>
-
-      <p>We have strong expertise in sourcing talent from Tier‑2 and Tier‑3 cities, ensuring cost‑effective and efficient hiring solutions.</p>
-
-      <p>Our team delivers pre‑screened, high‑quality candidates and aims to be a reliable hiring partner for fast and scalable IT & Non‑IT recruitment support.</p>
+      <p>We source talent from Tier‑2 and Tier‑3 cities for cost‑effective hiring.</p>
+      <p>We deliver pre‑screened, high‑quality candidates for IT & Non‑IT roles.</p>
     </div>
-
     <div class="hero-image">
       <img src="./logo.png" alt="JFinders Logo" />
     </div>
@@ -82,9 +193,9 @@
 
 <section id="about" class="page">
   <h2>About Us</h2>
-  <p><strong>JFinders</strong> is an India‑based recruitment and job search platform offering IT and Non‑IT hiring solutions across industries.</p>
-  <p>Unlike traditional job boards, we aggregate career opportunities from multiple sources across India, enabling faster and smarter hiring decisions.</p>
-  <p>With a strong pool of <strong>5,000+ verified professionals</strong>, we ensure quality, transparency, and speed in recruitment.</p>
+  <p><strong>JFinders</strong> is an India‑based recruitment platform providing IT and Non‑IT hiring solutions.</p>
+  <p>We aggregate job opportunities across India for faster hiring.</p>
+  <p>Backed by <strong>5,000+ verified professionals</strong>.</p>
 </section>
 
 <section id="services" class="page">
@@ -110,10 +221,15 @@
 </footer>
 
 <script>
-  function showPage(id){
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('navMenu').classList.remove('show');
+}
+
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('show');
+}
 </script>
 
 </body>
